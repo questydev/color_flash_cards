@@ -9,10 +9,17 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <div class="card">
-      <div>
-        <button class="changeBtn" onclick="colorChange()">Change!</button>
-      </div>
+    <div class="container">
+      <div class="colorCard"></div>
+      <div class="animalCard"></div>
+    </div>
+    <div>
+      <button class="changeBtn" onclick="colorChange(); animalChange()">
+        or click here to Change!
+      </button>
+
+      <div class="spaceBtn">Press Spacebar to Change</div>
+      <div class="nameCredit">Name</div>
     </div>
   </body>
 </html>
