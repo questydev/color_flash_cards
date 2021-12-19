@@ -15,28 +15,12 @@ let colorArray = [
   "limegreen",
 ];
 
-let animalArray = [];
-
-//Get Animal Pics from API
-async function getData() {
-  const res = await fetch(
-    "https://api.unsplash.com/search/photos?page=1&query=animals&client_id=wV366wG17ZFzGewQZOAlk7KuMBpSFNL9zQroLafIRyc"
-  );
-
-  const { results } = await res.json();
-
-  console.log(results);
-
-  results.forEach((animal) => {
-    const picList = animal.urls.regular;
-    animalArray.push(picList);
-  });
-
-  colorChange();
-  animalChange();
-}
-
-getData();
+let animalArray = [
+  "imgs/cat.jpg",
+  "imgs/dog.jpg",
+  "imgs/elephant.jpg",
+  "imgs/giraffe.jpg",
+];
 
 let colorRemoved = "";
 let prevColorRemoved = "";
@@ -91,3 +75,8 @@ document.addEventListener("keypress", (event) => {
     animalChange();
   }
 });
+
+colorChange();
+animalChange();
+
+console.log(animalArray);
